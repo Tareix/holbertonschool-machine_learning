@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 """
 Neural Style Transfer module (Task 0)
@@ -9,7 +8,7 @@ import tensorflow as tf
 
 class NST:
     """
-    Class NST that performs tasks for neural style transfer
+    Class NST that performs tasks for neural style transfer.
     """
 
     style_layers = [
