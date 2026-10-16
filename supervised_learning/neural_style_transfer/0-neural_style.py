@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 """
 Neural Style Transfer module (Task 0)
@@ -10,6 +11,7 @@ class NST:
     """
     Class NST that performs tasks for neural style transfer
     """
+
     style_layers = [
         'block1_conv1',
         'block2_conv1',
@@ -17,7 +19,7 @@ class NST:
         'block4_conv1',
         'block5_conv1'
     ]
-    content_layer = 'block4_conv2'
+    content_layer = 'block5_conv2'
 
     def __init__(self, style_image, content_image, alpha=1e4, beta=1):
         """
@@ -71,6 +73,7 @@ class NST:
             )
 
         h, w, _ = image.shape
+
         if h > w:
             h_new = 512
             w_new = int(w * (512 / h))
@@ -83,6 +86,7 @@ class NST:
             [h_new, w_new],
             method=tf.image.ResizeMethod.BICUBIC
         )
+
         scaled = scaled / 255.0
         scaled = tf.clip_by_value(scaled, 0.0, 1.0)
 
