@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 """
 Initializes all variables required to calculate the P affinities in t-SNE
